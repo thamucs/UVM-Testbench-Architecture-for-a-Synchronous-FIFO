@@ -23,12 +23,11 @@ The testbench was compiled and simulated using Xilinx Vivado. The simulation suc
 ### Initial Reset and Write Sequence
 The waveform below demonstrates the reset sequence and the initial randomized data inputs driving the write pointers (`wr_ptr`) and internal count up.
 
-![FIFO Initialization and Writes](image_83c4a4.jpg)
 
 ### FIFO Full Condition & Edge Case Handling
 This section of the waveform highlights the FIFO reaching its maximum depth (`count` = 10 in hex, which is 16). The UVM scoreboard correctly identifies that the `full` flag is asserted and verifies that subsequent write attempts are safely dropped by the RTL, preventing data corruption.
 
-![FIFO Full State Verification](image_83c4be.jpg)
+
 
 ## How to Run
 1. Ensure you have a SystemVerilog simulator with UVM 1.2 support (e.g., Vivado, Questa, VCS).
